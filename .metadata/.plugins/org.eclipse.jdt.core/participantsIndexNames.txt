@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+E:\softwares\hibernatePrograms\hibernate\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\407746153.index
+\MiniProject\src\main\resources
+E:\softwares\hibernatePrograms\hibernate\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\805276845.index
+\HibernateServletIntegration\src\main\resources
+E:\softwares\hibernatePrograms\hibernate\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\970539356.index
+\ServletHibernateApp\src

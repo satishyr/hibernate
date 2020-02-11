@@ -1,0 +1,34 @@
+package com.app.test;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
+
+import com.app.model.Employee;
+import com.app.util.HibernateUtil;
+
+public class Test {
+public static void main(String[] args) {
+	try(Session ses=HibernateUtil.getSf().openSession()){
+		Transaction ts=ses.beginTransaction();
+		String sql="select * from emp3";
+		NativeQuery q=ses.createNativeQuery(sql);
+		//FULL LOADING
+		/**List<Object[]> obs=q.list();
+		
+				for(Object[] ob:obs)
+				{
+					System.out.println(ob[0]+","+ob[1]+","+ob[2]);
+				}*/
+		//FULL LOADING
+		q.addEntity(Employee.class);
+		List<Employee> emps=q.list();
+		emps.forEach(System.out::println);
+	}catch(Exception e)
+	{
+		e.printStackTrace();
+	}
+}
+}
